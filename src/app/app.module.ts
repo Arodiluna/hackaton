@@ -7,13 +7,15 @@ import { LoginComponent } from './pages/login/login.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegistroComponent } from './pages/registro/registro.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
