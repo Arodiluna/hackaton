@@ -3,7 +3,8 @@ html {
   }
 
 main{
-    background: linear-gradient(rgba(253, 247, 237, 0.6), rgba(136, 193, 0, 0.6));
+    background: linear-gradient(rgb(255, 255, 255), rgba(136, 193, 0, 0.6));
+    font-family: 'Open Sans', sans-serif;
 
 }
   
@@ -31,7 +32,19 @@ main{
 .inicio-sesion{
     width: 100%;
     text-align: center;
+
 }
+
+.inicio-sesion h1{
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--color-verde);
+}
+
+.inicio-sesion p{
+    font-weight: 400;
+}
+
 
 .inputs{
     width: 100%;
@@ -40,21 +53,43 @@ main{
     gap: 1rem;
 }
 
+
 .inputs input{
     height: 4rem;
     border-radius: .5rem;
+    background-color:rgba(255, 255, 255, 0);
+    border-color: rgba(0, 0, 0, 0.19);
+    border-width: .1rem;
+}
+
+.inputs::placeholder{
+    font-weight: 300;
 }
 
 .boton-inicio-sesion{
     width: 100%;
-}
-
-.boton-inicio-sesion{
     display: flex;
     justify-content: center;
 }
 
 .boton-inicio-sesion button{
+    height: 5rem;
+    width: 20rem;
+}
+
+.separador-horizontal{
+border-top: .1rem solid var(--color-verde);
+width: 100%;
+margin: 1rem 0;
+}
+
+.boton-crear{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.boton-crear button{
     height: 5rem;
     width: 20rem;
 }
