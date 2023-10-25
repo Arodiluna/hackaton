@@ -1,0 +1,50 @@
+main{
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+
+.sec-1{
+    background-color: rgb(255, 231, 231);
+    width: 95%;
+    height: 75vh;
+    display: flex;
+}
+
+.bloq-contenido{
+    width: 50%;
+    padding-top: 5rem;
+    padding-left: 5rem;
+}
+
+.bloq-contenido h1{
+    margin-bottom: 5rem;
+}
+
+.bloq-video{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-botones{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+}
+
+.caja-link{
+    background-color: blueviolet;
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-botones a{
+    background-color: aquamarine;
+}
