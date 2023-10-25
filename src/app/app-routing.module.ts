@@ -9,6 +9,7 @@ import { tokenGuard } from './guards/token.guard';
 import { HomeComponent } from './pages/home/home.component';
 import { MaestroComponent } from './pages/maestro/maestro.component';
 import { EstudianteComponent } from './pages/estudiante/estudiante.component';
+import { QuizComponent } from './pages/quiz/quiz.component';
 
 const routes: Routes = [
   {
@@ -40,7 +41,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
       { path: 'dashboard', component: DashboardComponent},
-      { path: 'quiz', component: InicioComponent},
+      { path: 'quiz', component: QuizComponent},
       { path: '**', component: NotfoundComponent}
     ],
     //canActivate: [ tokenGuard ]
