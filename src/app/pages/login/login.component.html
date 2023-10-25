@@ -2,22 +2,58 @@
   <section class="bloq-izq">
     <div class="bloq-inicio-sesion">
       <div class="inicio-sesion">
+
+        <div class="alertas">
+           <p class="informacion" *ngIf="alerta.informacion"> {{ alerta.informacion }} </p>
+           <p class="error" *ngIf="alerta.error"> {{ alerta.error }} </p>
+           <p class="correcto" *ngIf="alerta.correcto"> {{ alerta.correcto }} </p>
+        </div>
+
         <h1>Iniciar Sesión</h1>
         <p>Ingresa tu nombre de usuario y tu contraseña para ingresar</p>
       </div>
 
+      
+      <form #myRegistro="ngForm" (ngSubmit)="login()">
+
       <div class="inputs">
-        <input type="text" placeholder="Usuario" />
-        <input type="text" placeholder="Contraseña" />
+        <input 
+         type="email"
+         name="email"
+         (ionChange)="removeSpaces()"
+         (input)="convertToLower()"
+         [(ngModel)]="usuario.email"
+         [disabled]="loading"
+         minlength="1"
+         maxlength="120"
+         placeholder="Correo electrónico"/>
+
+        <input 
+        type="password"
+        name="pass"
+        (ionChange)="removeSpaces()"
+        [(ngModel)]="usuario.pass"
+        [disabled]="loading"
+        minlength="1"
+        maxlength="60"
+        placeholder="Contraseña"/>
       </div>
+
 
       <div class="recuperar-contrasena">
         <a href="">¿Olvidaste tu contraseña?</a>
       </div>
 
       <div class="boton-inicio-sesion">
-        <button type="submit">INICIAR SESIÓN</button>
+        <button type="submit" [disabled]="loading" [ngClass]="{'boton-default': loading}">
+          <span value="warn" *ngIf="loading; else enviarText">
+              <img src="../../../assets/img/spinner/spinner.svg" alt="spinner">
+          </span>
+            <ng-template #enviarText>Iniciar sesión</ng-template>
+      </button>
       </div>
+
+    </form>
       
       <div class="separador-horizontal">  </div>
 
