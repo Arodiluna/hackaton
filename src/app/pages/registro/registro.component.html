@@ -2,37 +2,112 @@
   <section class="bloq-izq">
     <div class="bloq-img">
       <div>
-        <h2>Nombre del Proyecto</h2>
+        <h2>TachAll</h2>
         <h3>IA Inclusiva</h3>
       </div>
     </div>
   </section>
 
   <section class="bloq-der">
-    <form class="bloq-registro">
+    <form class="bloq-registro" #myRegistro="ngForm" (ngSubmit)="registro()">
       <div class="registro">
+
+        <div class="alertas">
+          <p class="informacion" *ngIf="alerta.informacion"> {{ alerta.informacion }} </p>
+          <p class="error" *ngIf="alerta.error"> {{ alerta.error }} </p>
+          <p class="correcto" *ngIf="alerta.correcto"> {{ alerta.correcto }} </p>
+       </div>
+
         <h1>Registro</h1>
         <p>Haz tu registro para crear tu cuenta</p>
       </div>
 
       <div class="inputs">
-        <input type="text" placeholder="Nombre" />
-        <input type="text" placeholder="Apellido Paterno" />
-        <input type="text" placeholder="Apellido Materno" />
-        <input type="text" placeholder="Discapacidad" />
+
+        <input type="text"
+        name="nombre" 
+        id="nombre" 
+        [(ngModel)]="usuario.nombre"
+        [disabled]="isLoading"
+        placeholder="Nombre"
+        minlength="1"
+        maxlength="60"
+        required>
+
+        <input type="text"
+        name="apellido_p" 
+        id="apellido_p" 
+        [(ngModel)]="usuario.apellido_p"
+        [disabled]="isLoading"
+        placeholder="Apellido Paterno"
+        minlength="1"
+        maxlength="60"
+        required>
+
+        <input type="text"
+        name="apellido_m" 
+        id="nombre" 
+        [(ngModel)]="usuario.apellido_m"
+        [disabled]="isLoading"
+        placeholder="Apellido materno"
+        minlength="1"
+        maxlength="60"
+        required>
+
+       <label for="discapacidad">¿Cuentas con capacidades diferentes?</label>
+       <select class="discapacidad" name="discapacidad" id="discapacidad" [disabled]="isLoading" [(ngModel)]="usuario.discapacidad">
+         <option value="1">Sí</option>
+         <option value="2">No</option>
+       </select>
+
         <div class="separador-horizontal"></div>
-        <input type="text" placeholder="Usuario" />
-        <input type="text" placeholder="E-mail" />
-        <input type="text" placeholder="Contraseña" />
-      </div>
+        
+        <input type="text"
+        name="usuario" 
+        id="nombre" 
+        [(ngModel)]="usuario.usuario"
+        [disabled]="isLoading"
+        (ionChange)="removeSpaces()"
+        (input)="convertToLower()"
+        placeholder="Usuario"
+        minlength="1"
+        maxlength="20"
+        required>
+
+        <input 
+         type="email"
+         name="email"
+         (ionChange)="removeSpaces()"
+         (input)="convertToLower()"
+         [(ngModel)]="usuario.email"
+         [disabled]="isLoading"
+         minlength="1"
+         maxlength="120"
+         placeholder="Correo electrónico"/>
+
+         <input 
+         type="password"
+         name="pass"
+         (ionChange)="removeSpaces()"
+         [(ngModel)]="usuario.pass"
+         [disabled]="isLoading"
+         minlength="1"
+         maxlength="60"
+         placeholder="Contraseña"/>
+       </div>
 
       <div class="caja-botones">
         <div class="boton-cuenta">
-          <button type="submit">YA TENGO UNA CUENTA</button>
+          <button type="submit" [disabled]="isLoading" [ngClass]="{'boton-default': isLoading}">
+            <span value="warn" *ngIf="isLoading; else enviarText">
+                <img src="../../../assets/img/spinner/spinner.svg" alt="spinner">
+            </span>
+              <ng-template #enviarText>Registrarme</ng-template>
+          </button>
         </div>
 
         <div class="boton-crear">
-          <button type="submit">CREAR CUENTA</button>
+          <button type="button" (click)="back()">Regresar</button>
         </div>
       </div>
     </form>
