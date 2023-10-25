@@ -14,6 +14,9 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { BienvenidaComponent } from './pages/bienvenida/bienvenida.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { QuizComponent } from './pages/quiz/quiz.component';
+import { MaestroComponent } from './pages/maestro/maestro.component';
+import { EstudianteComponent } from './pages/estudiante/estudiante.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { QuizComponent } from './pages/quiz/quiz.component';
     InicioComponent,
     BienvenidaComponent,
     DashboardComponent,
-    QuizComponent
+    QuizComponent,
+    MaestroComponent,
+    EstudianteComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
