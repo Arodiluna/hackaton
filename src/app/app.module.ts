@@ -8,6 +8,15 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
 import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { FooterComponent } from './pages/footer/footer.component';
+import { HeaderComponent } from './pages/header/header.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { BienvenidaComponent } from './pages/bienvenida/bienvenida.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { QuizComponent } from './pages/quiz/quiz.component';
+import { MaestroComponent } from './pages/maestro/maestro.component';
+import { EstudianteComponent } from './pages/estudiante/estudiante.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -15,7 +24,16 @@ import { RegistroComponent } from './pages/registro/registro.component';
     AppComponent,
     LoginComponent,
     NotfoundComponent,
-    RegistroComponent
+    RegistroComponent,
+    FooterComponent,
+    HeaderComponent,
+    InicioComponent,
+    BienvenidaComponent,
+    DashboardComponent,
+    QuizComponent,
+    MaestroComponent,
+    EstudianteComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

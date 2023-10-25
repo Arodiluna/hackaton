@@ -3,6 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { tokenGuard } from './guards/token.guard';
+import { HomeComponent } from './pages/home/home.component';
+import { MaestroComponent } from './pages/maestro/maestro.component';
+import { EstudianteComponent } from './pages/estudiante/estudiante.component';
 
 const routes: Routes = [
   {
@@ -17,6 +23,18 @@ const routes: Routes = [
   {
     path: 'registro',
     component: RegistroComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+    children: [
+      { path: '', redirectTo: 'inicio', pathMatch: 'full'},
+      { path: 'inicio', component: InicioComponent},
+      { path: 'maestro', component: MaestroComponent},
+      { path: 'estudiante', component: EstudianteComponent},
+      { path: 'dashboard', component: DashboardComponent},
+      { path: '**', component: NotfoundComponent}
+    ],
   },
   {
     path: '**',
