@@ -30,9 +30,17 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'inicio', pathMatch: 'full'},
       { path: 'inicio', component: InicioComponent},
-      { path: 'maestro', component: MaestroComponent},
-      { path: 'estudiante', component: EstudianteComponent},
+      { path: '**', component: NotfoundComponent}
+    ],
+    //canActivate: [ tokenGuard ]
+  },
+  {
+    path: 'maestro',
+    component: MaestroComponent,
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
       { path: 'dashboard', component: DashboardComponent},
+      { path: 'quiz', component: InicioComponent},
       { path: '**', component: NotfoundComponent}
     ],
     //canActivate: [ tokenGuard ]
