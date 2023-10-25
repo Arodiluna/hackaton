@@ -15,10 +15,10 @@ export class RegistroService {
   constructor( private http: HttpClient, 
     private route: Router ) { }
 
-    registro( nombre: string, apellido_p: string, apellido_m: string, usuario: string, discapacidad: string, fecha_nacimiento: string, email: string, pass: string ): Promise<boolean> {
+    registro( nombre: string, apellido_p: string, apellido_m: string, usuario: string, discapacidad: string, email: string, pass: string ): Promise<boolean> {
 
       //Constante con el valor email y pass.
-      const data = { nombre, apellido_p, apellido_m, usuario, discapacidad, fecha_nacimiento, email, pass };
+      const data = { nombre, apellido_p, apellido_m, usuario, discapacidad, email, pass };
   
       //Crear promesa.
       return new Promise<boolean>( resolve => {
