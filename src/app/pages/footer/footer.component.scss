@@ -4,46 +4,139 @@ footer{
     display: flex;
     justify-content: center;
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .sec-1{
+    position: relative;
+    background-image: url(/assets/img/footer/fondo-footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center 5rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 1;
 }
 
+.sec-1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #FF8A00, #FABE28);
+    opacity: 60%;
+    z-index: -1;
+}
+
+
 .bloq-1{
+    margin-top: 1rem;
+    color: white;
     width: 100%;
     text-align: center;
 }
 
-.bloq-2{
+.bloq-1 h2{
+  font-size: 3rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.bloq-1 p{
+    font-size: 1.6rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+
+
+
+.sec-2{
     background-color: white;
     width: 90%;
-    height: 90%;
+    height: 40%;
     display: flex;
-    justify-content: space-between;
+    gap: 15rem;
+    padding: 2rem;
+    color: var(--color-naranja);
+    margin-bottom: 3rem;
+}
+
+.sec-2 a{
+    color: var(--color-naranja);
+    text-decoration: none;
+}
+
+.sec-2 a:visited{
+    color: var(--color-naranja);
+}
+
+.sec-2 h3{
+    margin-top: 0;
+}
+
+.sec-2 ul{
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.sec-2 ul li{
+    margin-bottom: 1rem;
 }
 
 .siguenos ul img{
     width: 1.5rem;
     height: 1.5rem;
+    padding-right: 1rem;
+}
+
+.siugenos li{
+    display: flex;
+    align-items: center;
 }
 
 .sec-3{
     width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-naranja);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.sec-3 a {
+    color: white;
+    text-align: center;
+}
+
+.sec-3 a:visited{
+    color: white;
+}
+
+.links{
+    width: 85%;
+    padding-left: 1rem;
+    display: flex;
     justify-content: space-around;
 }
 
+
 .logo{
-    padding-left: 2rem;
     display: flex;
     width: 15%;
-    background-color: aquamarine;
     align-items: center;
+}
+
+.logo h2{
+    font-size: 1rem;
+    padding-right: 1rem;
+    color: white;
 }
 
 .logo img{

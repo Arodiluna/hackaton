@@ -35,7 +35,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent},
       { path: '**', component: NotfoundComponent}
     ],
-    canActivate: [ tokenGuard ]
+    //canActivate: [ tokenGuard ]
   },
   {
     path: '**',
