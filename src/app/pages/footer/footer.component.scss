@@ -1,0 +1,53 @@
+footer{
+    height: 80vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.sec-1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bloq-1{
+    width: 100%;
+    text-align: center;
+}
+
+.bloq-2{
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.siguenos ul img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.sec-3{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo{
+    padding-left: 2rem;
+    display: flex;
+    width: 15%;
+    background-color: aquamarine;
+    align-items: center;
+}
+
+.logo img{
+    width: 4rem;
+    height: 4rem;
+
+}
