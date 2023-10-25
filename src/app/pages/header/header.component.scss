@@ -1,16 +1,14 @@
 header{
-    height: 8rem;
-    background-color: aqua;
+    height: 6rem;
     display: flex;
     align-items: center;
     font-family: 'Open Sans', sans-serif;
-}
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;}
 
 .logo{
     padding-left: 2rem;
     display: flex;
     width: 15%;
-    background-color: aquamarine;
     align-items: center;
 }
 
@@ -20,23 +18,53 @@ header{
 
 }
 
+.logo h2{
+    padding-left: 1rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--color-naranja);
+}
+
 nav{
     display: flex;
     justify-content: space-around;
     width: 75%;
-    background-color: blueviolet;
 }
+
+nav a{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+nav a:visited{
+    color: black;
+}
+
 
 .sesion{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
     width: 20%;
-    background-color: cadetblue;
     justify-content: space-between;
     padding: 1rem;
+    padding-right: 3rem;
 }
 
 
-.inicio-sesion{
-    background-color: aquamarine;
+.sesion p{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.sesion a{
+    color: red;
+    font-weight: 500;
+}
+
+.sesion a:visited{
+    color: red;
 }
