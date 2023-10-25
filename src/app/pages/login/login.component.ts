@@ -68,7 +68,7 @@ export class LoginComponent {
         });
       } else {
         this.loading = true;
-        const valido = await this.loginService.loginAdm( this.usuario.email, this.usuario.pass );
+        const valido = await this.loginService.login( this.usuario.email, this.usuario.pass );
 
         if ( valido ) {
           this.loading = false;

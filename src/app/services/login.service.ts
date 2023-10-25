@@ -15,7 +15,7 @@ export class LoginService {
   constructor( private http: HttpClient, 
     private route: Router ) { }
 
-    loginAdm( email: string, pass: string ): Promise<boolean> {
+    login( email: string, pass: string ): Promise<boolean> {
 
       //Constante con el valor email y pass.
       const data = { email, pass };
