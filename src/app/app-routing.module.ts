@@ -41,7 +41,7 @@ const routes: Routes = [
       { path: 'inicio', component: InicioComponent},
       { path: '**', component: NotfoundComponent}
     ],
-    //canActivate: [ tokenGuard ]
+    canActivate: [ tokenGuard ]
   },
   {
     path: 'maestro',
@@ -53,7 +53,7 @@ const routes: Routes = [
       { path: 'sala', component: SalaComponent},
       { path: '**', component: NotfoundComponent}
     ],
-    //canActivate: [ tokenGuard ]
+    canActivate: [ tokenGuard ]
   },
   {
     path: 'estudiante',
@@ -64,7 +64,7 @@ const routes: Routes = [
       { path: 'quiz_estudiante', component: QuizAlumnosComponent},
       { path: '**', component: NotfoundComponent}
     ],
-    //canActivate: [ tokenGuard ]
+    canActivate: [ tokenGuard ]
   },
   {
     path: '**',

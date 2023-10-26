@@ -1,0 +1,112 @@
+main{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+}
+
+.bloq-principal{
+    width: 90%;
+    height: 80%;
+    padding: 2%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.sec-1{
+    width: 50%;
+    background-color: aqua;
+    border-radius: .6rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.unirse{
+    background-color: blue;
+    padding: 1rem;
+}
+
+
+.sec-2{
+    width: 50%;
+    background-color: aquamarine;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sec-2 .bloq-1{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: burlywood;
+}
+
+.bloq-datos{
+    background-color: brown;
+    width: 60%;
+    height: 100%;
+}
+
+
+.datos{
+    background-color: aquamarine;
+    margin-bottom: 1rem;
+}
+
+.bloq-avatar{
+    background-color: cadetblue;
+    width: 40%;
+    height: 100%;
+}
+
+.bloq-1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.sec-2 .bloq-2{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+.bloq-mancha{
+    width: 50%;
+    background-color: rgb(255, 127, 217);
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bloq-mancha h3{
+    margin: 0;
+    color: white;
+}
+
+.mancha{
+    background-image: url("/assets/img/login/IMAGEN NIÑA.png");
+    width: 8rem;
+    height: 8rem;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
