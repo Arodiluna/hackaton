@@ -30,6 +30,7 @@
 
             <div class="img">
                 <img *ngIf="resultado_imagen" [src]="resultado_imagen" alt="imagen">
+                <a *ngIf="resultado_imagen" href="{{resultado_imagen}}" download="{{resultado_imagen}}"> <mat-icon>download</mat-icon> Descargar</a>
             </div>
 
             <form #myRegistro="ngForm" (ngSubmit)="imagenai()">
