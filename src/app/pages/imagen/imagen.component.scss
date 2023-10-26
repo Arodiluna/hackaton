@@ -1,0 +1,209 @@
+main{
+    background: linear-gradient(to bottom, #FF8A00, #ff003c00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    height: auto;
+}
+
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2.5%;
+    gap: .5rem;
+    background-color: white;
+    min-height: 30rem;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.imagen {
+    padding: 1rem;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.bloq-opciones{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+}
+
+.bloq-opciones button{
+    font-weight: 600;
+    border: none;
+    color: white;
+    height: 3rem;
+    width: 8rem;
+    background-color: #00C176;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.bloq-opciones button:hover {
+    background-color: #ffffff;
+        background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse por encima */
+    color: #00C176;
+}
+
+
+
+
+.imagen .img{
+    background: linear-gradient(to bottom, #88C100, #bfeb58);
+        min-height: 16rem;
+        padding: 2%;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+}
+
+
+.imagen .img img {
+    height: 80%;
+    animation: imagen .3s ease-in-out;
+    border-radius: .5rem;
+}
+
+
+@keyframes imagen {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.imagen .img a {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: .5rem;
+}
+
+.imagen .form-imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    background: linear-gradient(to bottom, #88C100, #bfeb58);
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.imagen form .input{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen form input {
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: .6rem;
+    border-style: solid;
+    border-width: .1rem;
+    border-color: rgb(161, 161, 161);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.imagen form input::placeholder{
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.imagen form button {
+    border: none;
+    border-radius: 60%;
+}
+
+.imagen .opciones{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: none;
+}
+
+.imagen .opciones button{
+    border: none;
+    border-radius: .5rem;
+    height: 4rem;
+    width: 15rem;
+    background-color: white;
+    font-weight: 600;
+    color: #00C176;
+
+}
+
+.imagen .opciones button{
+    border: none;
+    border-radius: .5rem;
+    height: 4rem;
+    width: 15rem;
+    background-color: white;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.imagen .opciones button:hover {
+    background-color: #00C176;
+        color: white;
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse por encima */
+}
+
+
+.imagen .img {
+    padding: 2rem;
+    height: 70%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.chat.boton-default {
+    cursor: none;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.800);
+}
+
+
+.chat span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+span img {
+    width: 30px;
+}

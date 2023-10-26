@@ -1,1 +1,57 @@
-<p>imagen works!</p>
+<main>
+  <section class="contenido">
+    <div class="imagen">
+      <div class="img">
+        <div class="bloq-opciones">
+          <button>Infantil</button>
+          <button>Divertida</button>
+          <button>Minimalista</button>
+          <button>Blanco y Negro</button>
+          <button>Futurista</button>
+        </div>
+
+        <img *ngIf="!resultado_imagen" src="../../../assets/" alt="imagen" />
+        <img *ngIf="resultado_imagen" [src]="resultado_imagen" alt="imagen" />
+        <a
+          *ngIf="resultado_imagen"
+          href="{{ resultado_imagen }}"
+          download="{{ resultado_imagen }}"
+        >
+          <mat-icon>download</mat-icon> Descargar</a
+        >
+      </div>
+
+      <form class="form-imagen" #myRegistro="ngForm" (ngSubmit)="imagenai()">
+        <div class="input">
+          <input
+            type="text"
+            name="imagen"
+            [(ngModel)]="imagen"
+            [disabled]="loading"
+            placeholder="Quiero una imagen de..."
+          />
+
+          <button
+            mat-mini-fab
+            color="primary"
+            type="submit"
+            [disabled]="loading"
+            [ngClass]="{ 'boton-default': loading }"
+          >
+            <span value="warn" *ngIf="loading; else enviar">
+              <img
+                src="../../../assets/img/spinner/spinner.svg"
+                alt="spinner"
+              />
+            </span>
+            <ng-template #enviar><mat-icon>send</mat-icon></ng-template>
+          </button>
+        </div>
+        <form class="opciones">
+          <button type="submit">Quiero otra opcion!</button>
+          <button type="submit">Borrar Imagen</button>
+        </form>
+      </form>
+    </div>
+  </section>
+</main>
