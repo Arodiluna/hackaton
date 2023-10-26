@@ -4,6 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 .contenido {
@@ -12,9 +14,12 @@
     width: 100%;
     margin-left: 5%;
     margin-right: 5%;
+    gap: .5rem;
     background-color: white;
     height: 30rem;
     border-radius: 10px;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .chat {
@@ -26,22 +31,79 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 1rem;
 }
+
+.chat .texto{
+    background: linear-gradient(to bottom, #FF8A00 ,#ffa237 );
+        overflow-y: scroll;
+        height: 70%;
+        width: 90%;
+        padding: 5%;
+        border-radius: .5rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        color: white;
+        font-weight: 500;
+
+}
+
+.chat .texto::-webkit-scrollbar {
+    width: 12px;
+    margin-right: 10px; /* Agrega un margen a la derecha de la barra de desplazamiento */
+
+}
+
+.chat .texto::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+.chat .texto::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+.chat .texto::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.chat .texto a { /* Añadido: Cambio de color para enlaces */
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 
 .chat .texto p {
     text-align: justify;
+    margin: 0;
 }
 
 .chat form {
-    padding-bottom: 20px;
+    background: linear-gradient(to bottom, #FF8A00 , #ffa237 );
+    border-radius: .5rem;
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .chat form input {
     height: 30px;
-    width: 200px;
+    width: 60%;
     padding: 5px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: .6rem;
+    border-style: solid;
+    border-width: .1rem;
+    border-color: rgb(161, 161, 161);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.chat form input::placeholder{
+    font-weight: 600;
+    text-align: center;
 }
 
 .chat form button {
@@ -50,27 +112,52 @@
 }
 
 .imagen {
-    margin-left: 10px;
-    margin-right: 10px;
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    gap: 1rem;
+}
+
+.imagen .img{
+    background: linear-gradient(to bottom, #88C100, #bfeb58);
+        height: 70%;
+        width: 15rem;
+        padding: 5%;
+        border-radius: .5rem;
 }
 
 .imagen form {
-    padding-bottom: 20px;
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    gap: 1rem;
+    background: linear-gradient(to bottom, #88C100, #bfeb58);
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .imagen form input {
     height: 30px;
-    width: 200px;
+    width: 60%;
     padding: 5px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: .6rem;
+    border-style: solid;
+    border-width: .1rem;
+    border-color: rgb(161, 161, 161);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.imagen form input::placeholder{
+    font-weight: 600;
+    text-align: center;
+}
+
 
 .imagen form button {
     border: none;
@@ -78,7 +165,9 @@
 }
 
 .imagen .img {
-    width: 200px;
+    width: 90%;
+    padding: 5%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .chat.boton-default {
