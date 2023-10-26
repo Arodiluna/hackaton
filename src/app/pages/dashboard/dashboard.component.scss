@@ -17,47 +17,67 @@ main{
 
 .sec-1{
     height: 100%;
-    background-color: aqua;
+    background: linear-gradient(to bottom, #88C100, #bfeb58);
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
+  
 }
 
 .sec-1 .titulo-quiz{
-    background-color: blueviolet;
+   
     width: 90%;
+    text-align: center;
+    color: white;
+    font-size: 2.8rem;
+    margin: .8rem;
 }
+
 
 .mi-quiz{  
     padding: 5%;
     width: 80%;
     height: 4.5rem;
-    background-color: chocolate;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    border-radius: .6rem;
+   
+}
+
+.quiz h4{
+    font-weight: 500;
 }
 
 .info-extra{
-    background-color: chartreuse;
+    
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    padding-top: 1rem;
+    
 }
 
 .caja-activar{
     
-    background-color: aquamarine;
+    background-color: #00c176;
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
     height: 4rem;
     width: 100%;
+    border-radius: .6rem;
+    font-weight: 700;
 }
 
+.caja-activar a{
+    text-decoration: none;
+    color: white;
+}
 .sec-2{
     width: 66%;
     background-color: aquamarine;
