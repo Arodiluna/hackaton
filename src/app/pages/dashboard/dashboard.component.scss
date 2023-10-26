@@ -4,6 +4,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .bloq-principal{
@@ -22,7 +23,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+    border-radius: .5rem;
 }
 
 .sec-1 .titulo-quiz{
@@ -80,14 +81,112 @@ main{
 }
 .sec-2{
     width: 66%;
-    background-color: aquamarine;
-    padding: 2%;
 }
 
 .bloq-crear{
-    background-color: chartreuse;
+    height: 30%;
+    background: linear-gradient(to bottom, #88C100, #bfeb58);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
 }
 
+.bloq-crear img{
+    width: 4rem;
+    height: 4rem;
+}
+
+.bloq-crear-texto{
+    text-align: center;
+    width: 50%;
+    font-size: 2.8rem;
+    color: white;
+    font-weight: 700;
+    letter-spacing: .25rem;
+    padding: 1rem;
+}
+
+.bloq-crear-texto p{
+    margin: 0;
+}
+
+.encabezado-tabla{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, #88C100, #bfeb58);
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    height: 4rem;
+    border-radius: 0.6rem 0.6rem 0 0;
+
+}
+
+.encabezado-tabla h2{
+    margin: 0;
+}
+
+.caja-excel{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-excel img{
+    width: 2rem;
+    height: 2rem;
+
+}
+
+.caja-titulo{
+    font-size: 1.4rem;
+    margin-right: 4rem;
+    color: white;
+}
+
+
+
+table{
+    margin-top: 0;
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+tbody, td, tr{
+    text-align: center;
+}
+
+thead{
+    height: 3rem;
+    background-color: #87c1007c;
+    color: white;
+}
+
+.col-1{
+    width: 20%;
+}
+
+.col-2{
+    width: 40%;
+}
+
+.col-3{
+    width: 40%;
+}
+
+tbody{
+    height: 13.6rem;
+    background-color: white;
+
+}
 
 
 
