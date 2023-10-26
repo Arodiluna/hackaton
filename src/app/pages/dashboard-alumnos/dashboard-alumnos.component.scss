@@ -3,7 +3,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: orange;
+    background: linear-gradient(to bottom, #FF8A00, #ff003c00);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .bloq-principal{
@@ -17,27 +18,104 @@ main{
     gap: 2rem;
 }
 
-
 .sec-1{
+    display: flex;
     width: 50%;
-    background-color: aqua;
-    border-radius: .6rem;
     height: 100%;
+    background-color: white;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.bloq-1{
+    width: 100%;
+    background-image: url("../../../assets/img/dashboard-alumnos/imgarcoiris.jpg");
+    border-radius: .6rem;
+    height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.bloq-1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(211, 191, 154) , rgba(178, 142, 94)); 
+    border-radius: 1rem;
+    opacity: 50%;
+    z-index: -1;
+}
+
+
+.bloq-ia{
+    width: 100%;
+    background-image: url("../../../assets/img/dashboard-alumnos/arcoiris2.jpg");
+    border-radius: .6rem;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+   
+    
+}
+
+.bloq-ia::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(211, 191, 154) , rgba(178, 142, 94)); 
+    border-radius: 1rem;
+    opacity: 50%;
+    z-index: -1;
 }
 
 
 .unirse{
-    background-color: blue;
+    background-color:#FABE28;
     padding: 1rem;
+    border-radius: .5rem;
+    width: 25rem;
+    height: 50%;
+    border: none;
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 700;
+    
+}
+
+.usar-ia{
+    background-color:#FABE28;
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 25rem;
+    height: 50%;
+    border: none;
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 700;
+   opacity: 100%;
+    z-index: 1;
+
+  
+    
 }
 
 
 .sec-2{
     width: 50%;
-    background-color: aquamarine;
+    background-color:white;
     height: 100%;
     flex-direction: column;
     display: flex;
@@ -55,15 +133,31 @@ main{
 }
 
 .bloq-datos{
-    background-color: brown;
+    background-color: white;
     width: 60%;
     height: 100%;
+    text-align: center;
+   
 }
 
+.bloq-datos h3{
+    font-weight: 700;
+}
 
 .datos{
-    background-color: aquamarine;
+    background-color: #d9d9d9;
     margin-bottom: 1rem;
+    height: 3rem;
+    width: 22rem;
+    border-radius: .6rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-weight: 700;
+}
+
+.datos span{
+    font-weight: 400;
 }
 
 .bloq-avatar{
@@ -84,15 +178,24 @@ main{
     gap: 1rem;
 }
 
-.bloq-mancha{
+.bloq-mancha {
     width: 50%;
-    background-color: rgb(255, 127, 217);
     margin: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-radius: .6rem;
 }
+
+.amarillo{
+    background-color:#FABE28;
+}
+
+.naranja{
+    background-color: #ff8a00;;
+}
+
 
 .bloq-mancha h3{
     margin: 0;
@@ -100,11 +203,17 @@ main{
 }
 
 .mancha{
-    background-image: url("/assets/img/login/IMAGEN NIÑA.png");
-    width: 8rem;
-    height: 8rem;
+    background-image: url("../../../assets/img/dashboard-alumnos/mancha.png");
+    width: 9rem;
+    height: 9rem;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #FF8A00;
+    font-weight: 700;
 }
 
 
