@@ -52,7 +52,7 @@ const routes: Routes = [
     path: 'estudiante',
     component: EstudianteComponent,
     children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+      { path: '', redirectTo: 'dashboard_estudiante', pathMatch: 'full'},
       { path: 'dashboard_estudiante', component: DashboardAlumnosComponent},
       { path: 'quiz_estudiante', component: QuizAlumnosComponent},
       { path: '**', component: NotfoundComponent}
