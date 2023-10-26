@@ -1,0 +1,100 @@
+.content {
+    background: linear-gradient(to bottom, #FF8A00, #ff003c00);
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white;
+    height: 30rem;
+    border-radius: 10px;
+}
+
+.chat {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.chat .texto p {
+    text-align: justify;
+}
+
+.chat form {
+    padding-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.chat form input {
+    height: 30px;
+    width: 200px;
+    padding: 5px;
+}
+
+.chat form button {
+    border: none;
+    border-radius: 60%;
+}
+
+.imagen {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.imagen form {
+    padding-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.imagen form input {
+    height: 30px;
+    width: 200px;
+    padding: 5px;
+}
+
+.imagen form button {
+    border: none;
+    border-radius: 60%;
+}
+
+.imagen .img {
+    width: 200px;
+}
+
+.chat.boton-default {
+    cursor: none;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.800);
+}
+
+
+.chat span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+span img {
+    width: 30px;
+}

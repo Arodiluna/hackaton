@@ -13,8 +13,8 @@ export class QuizComponent {
   loading: boolean = false;
 
   mensajes = {
-    mensaje_uno: '',
-    mensaje_dos: ''
+    mensaje_uno: '',//Tema
+    mensaje_dos: ''//El número de preguntas.
   }
 
   complet: string = '';
