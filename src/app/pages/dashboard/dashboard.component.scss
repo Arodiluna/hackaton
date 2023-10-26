@@ -7,6 +7,8 @@ main{
 }
 
 .bloq-principal{
+    display: flex;
+    gap: 1em;
     width: 95%;
     height: 85%;
     background-color: white;
@@ -54,6 +56,16 @@ main{
     align-self: center;
     height: 4rem;
     width: 100%;
+}
+
+.sec-2{
+    width: 66%;
+    background-color: aquamarine;
+    padding: 2%;
+}
+
+.bloq-crear{
+    background-color: chartreuse;
 }
 
 
