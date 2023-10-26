@@ -12,6 +12,7 @@ import { EstudianteComponent } from './pages/estudiante/estudiante.component';
 import { QuizComponent } from './pages/quiz/quiz.component';
 import { DashboardAlumnosComponent } from './pages/dashboard-alumnos/dashboard-alumnos.component';
 import { QuizAlumnosComponent } from './pages/quiz-alumnos/quiz-alumnos.component';
+import { InclusionComponent } from './pages/inclusion/inclusion.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'registro',
     component: RegistroComponent
+  },
+  {
+    path: 'inclusion',
+    component: InclusionComponent
   },
   {
     path: 'home',
