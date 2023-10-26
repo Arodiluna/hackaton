@@ -1,0 +1,62 @@
+main{
+    height: 85vh;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloq-principal{
+    width: 95%;
+    height: 85%;
+    background-color: white;
+    padding: 1rem;
+}
+
+.sec-1{
+    height: 100%;
+    background-color: aqua;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec-1 .titulo-quiz{
+    background-color: blueviolet;
+    width: 90%;
+}
+
+.mi-quiz{  
+    padding: 5%;
+    width: 80%;
+    height: 4.5rem;
+    background-color: chocolate;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.info-extra{
+    background-color: chartreuse;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.caja-activar{
+    
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 4rem;
+    width: 100%;
+}
+
+
+
+
+
