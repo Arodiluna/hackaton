@@ -25,6 +25,7 @@ import { InclusionComponent } from './pages/inclusion/inclusion.component';
 import { DashboardAlumnosComponent } from './pages/dashboard-alumnos/dashboard-alumnos.component';
 import { QuizAlumnosComponent } from './pages/quiz-alumnos/quiz-alumnos.component';
 import { SalaComponent } from './pages/sala/sala.component';
+import { SalaAlumnoComponent } from './pages/sala-alumno/sala-alumno.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { SalaComponent } from './pages/sala/sala.component';
     DashboardAlumnosComponent,
     QuizAlumnosComponent,
     SalaComponent,
+    SalaAlumnoComponent,
   ],
   imports: [
     BrowserModule,

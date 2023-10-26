@@ -14,6 +14,7 @@ import { DashboardAlumnosComponent } from './pages/dashboard-alumnos/dashboard-a
 import { QuizAlumnosComponent } from './pages/quiz-alumnos/quiz-alumnos.component';
 import { InclusionComponent } from './pages/inclusion/inclusion.component';
 import { SalaComponent } from './pages/sala/sala.component';
+import { SalaAlumnoComponent } from './pages/sala-alumno/sala-alumno.component';
 
 const routes: Routes = [
   {
@@ -62,6 +63,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'dashboard_estudiante', pathMatch: 'full'},
       { path: 'dashboard_estudiante', component: DashboardAlumnosComponent},
       { path: 'quiz_estudiante', component: QuizAlumnosComponent},
+      { path: 'sala_estudiante', component: SalaAlumnoComponent},
       { path: '**', component: NotfoundComponent}
     ],
     //canActivate: [ tokenGuard ]
