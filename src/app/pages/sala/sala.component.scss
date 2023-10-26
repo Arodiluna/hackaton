@@ -1,0 +1,18 @@
+.content {
+    background: linear-gradient(to bottom, #FF8A00, #ff003c00);
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto {
+    width: 80%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.texto p {
+    text-align: justify;
+}

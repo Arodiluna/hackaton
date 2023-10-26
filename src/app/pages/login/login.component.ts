@@ -32,7 +32,7 @@ export class LoginComponent {
 
   ngOnInit() {
      //Verificar token.
-     if ( this.token == this.token ) {
+     if ( this.token = this.token ) {
       this.route.navigate(['home']);
      } else {
       this.route.navigate(['login']);
@@ -50,7 +50,6 @@ export class LoginComponent {
   }
 
   async login() {
-    console.log(this.usuario);
     const contador = timer(5000);
     if ( this.usuario.pass == '' || this.usuario.email == '') {
       console.log('Campos vacíos');

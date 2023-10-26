@@ -103,4 +103,14 @@ validarToken (): Promise<boolean> {
     })
   });
 }
+
+//Cerrar sesión.
+async cerrarSesion () {
+  //Mostrar loading. 
+          localStorage.removeItem('token');
+          localStorage.removeItem('rol');
+          localStorage.removeItem('nombre');
+          await this.route.navigate(['login']);
+}
+
 }

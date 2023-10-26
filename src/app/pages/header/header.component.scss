@@ -61,6 +61,8 @@ nav a:visited{
 }
 
 .sesion a{
+    cursor: pointer;
+    text-decoration: underline;
     color: red;
     font-weight: 500;
 }

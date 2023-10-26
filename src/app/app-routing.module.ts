@@ -13,6 +13,7 @@ import { QuizComponent } from './pages/quiz/quiz.component';
 import { DashboardAlumnosComponent } from './pages/dashboard-alumnos/dashboard-alumnos.component';
 import { QuizAlumnosComponent } from './pages/quiz-alumnos/quiz-alumnos.component';
 import { InclusionComponent } from './pages/inclusion/inclusion.component';
+import { SalaComponent } from './pages/sala/sala.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
       { path: 'dashboard', component: DashboardComponent},
       { path: 'quiz', component: QuizComponent},
+      { path: 'sala', component: SalaComponent},
       { path: '**', component: NotfoundComponent}
     ],
     //canActivate: [ tokenGuard ]

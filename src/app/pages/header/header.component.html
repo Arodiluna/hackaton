@@ -13,8 +13,9 @@
     </nav>
 
     <div class="sesion">
-        <p>Jessica Gaytán Cruz</p>
-        <a href="">Cerrar Sesion</a>
+        <p *ngIf="nombre"> {{ nombre }} </p>
+        <p *ngIf="!nombre"> User </p>
+        <a (click)="cerrar_sesion()">Cerrar Sesion</a>
     </div>
     
 </header>
