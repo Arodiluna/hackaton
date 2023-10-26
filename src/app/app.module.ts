@@ -27,6 +27,10 @@ import { QuizAlumnosComponent } from './pages/quiz-alumnos/quiz-alumnos.componen
 import { SalaComponent } from './pages/sala/sala.component';
 import { SalaAlumnoComponent } from './pages/sala-alumno/sala-alumno.component';
 import { InteligenciaAlumnosComponent } from './pages/inteligencia-alumnos/inteligencia-alumnos.component';
+import { ChatgptComponent } from './pages/chatgpt/chatgpt.component';
+import { ImagenComponent } from './pages/imagen/imagen.component';
+import { PrincipalComponent } from './pages/principal/principal.component';
+import { DashboardPrincipalComponent } from './pages/dashboard-principal/dashboard-principal.component';
 
 
 @NgModule({
@@ -50,6 +54,10 @@ import { InteligenciaAlumnosComponent } from './pages/inteligencia-alumnos/intel
     SalaComponent,
     SalaAlumnoComponent,
     InteligenciaAlumnosComponent,
+    ChatgptComponent,
+    ImagenComponent,
+    PrincipalComponent,
+    DashboardPrincipalComponent,
   ],
   imports: [
     BrowserModule,

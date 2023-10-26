@@ -17,6 +17,10 @@ import { SalaComponent } from './pages/sala/sala.component';
 import { SalaAlumnoComponent } from './pages/sala-alumno/sala-alumno.component';
 import { InteligenciaAlumnosComponent } from './pages/inteligencia-alumnos/inteligencia-alumnos.component';
 import { BienvenidaComponent } from './pages/bienvenida/bienvenida.component';
+import { PrincipalComponent } from './pages/principal/principal.component';
+import { DashboardPrincipalComponent } from './pages/dashboard-principal/dashboard-principal.component';
+import { ImagenComponent } from './pages/imagen/imagen.component';
+import { ChatgptComponent } from './pages/chatgpt/chatgpt.component';
 
 const routes: Routes = [
   {
@@ -71,6 +75,18 @@ const routes: Routes = [
       { path: 'quiz_estudiante', component: QuizAlumnosComponent},
       { path: 'sala_estudiante', component: SalaAlumnoComponent},
       { path: 'ia_estudiante', component: InteligenciaAlumnosComponent},
+      { path: '**', component: NotfoundComponent}
+    ],
+    canActivate: [ tokenGuard ]
+  },
+  {
+    path: 'principal',
+    component: PrincipalComponent,
+    children: [
+      { path: '', redirectTo: 'dashboard_principal', pathMatch: 'full'},
+      { path: 'dashboard_principal', component: DashboardPrincipalComponent},
+      { path: 'imagen', component: ImagenComponent},
+      { path: 'chat', component: ChatgptComponent},
       { path: '**', component: NotfoundComponent}
     ],
     canActivate: [ tokenGuard ]
