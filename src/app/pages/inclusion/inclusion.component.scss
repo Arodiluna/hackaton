@@ -1,0 +1,13 @@
+.inclusion {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(27, 27, 27);
+    padding: 1rem;
+    border-radius: .5rem;
+    z-index: 1000;
+}

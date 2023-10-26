@@ -1,17 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+//Funciones especiales.
+//Hacer grande el mouse.
+//Cambiar cursor.
+.big-cursor {
+    cursor: url('assets/mouse/mouse-grande.png'), auto;
+}
+
+//Fuente.
+//Agregar fuente.
+@font-face {
+    font-family: 'dislex';
+    src: url('/assets/fuentes/OpenDyslexic-Regular.otf');
+}
+
+//Cambiar fuente.
+.font {
+    font-family: 'Playpen Sans', cursive!important;
+    letter-spacing: 2px;
+}
+
+//Cambiar colores.
+.invert-colors {
+    filter: invert(1); /* Invertir los colores en toda la página */
+}
 
 :root{
     --color-verde: #88C100;
     --color-naranja: #FF8A00;
 }
 
-html, body { height: 100%; }
-body { 
+html, body { height: 100%;
     margin: 0; 
-    font-family: Roboto, "Helvetica Neue", sans-serif;
     margin: 0;
-    padding: 0;
- }
+    padding: 0; 
+    margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
