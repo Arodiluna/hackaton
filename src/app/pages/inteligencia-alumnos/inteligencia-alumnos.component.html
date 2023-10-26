@@ -1,0 +1,54 @@
+<main class="content">
+
+    <div class="contenido">
+
+        <div class="chat">
+            <div class="texto">
+                <p *ngIf="respuestaChat"> {{ respuestaChat }} </p>
+                <p *ngIf="!respuestaChat"> Esperando mensaje... </p>
+            </div>
+
+            <form #myRegistro="ngForm" (ngSubmit)="openai()">
+                <input 
+                type="text" 
+                name="chat"
+                name="mensaje_uno"
+                [(ngModel)]="mensaje"
+                [disabled]="loading"
+                placeholder="Escribe tu pregunta aquí...">
+
+                <button mat-mini-fab color="primary" type="submit" [disabled]="loading" [ngClass]="{'boton-default': loading}">
+                    <span value="warn" *ngIf="loading; else enviarText">
+                        <img src="../../../assets/img/spinner/spinner.svg" alt="spinner">
+                    </span>
+                      <ng-template #enviarText><mat-icon>send</mat-icon></ng-template>
+                </button>
+            </form>
+        </div>
+
+        <div class="imagen">
+
+            <div class="img">
+                <img *ngIf="resultado_imagen" [src]="resultado_imagen" alt="imagen">
+            </div>
+
+            <form #myRegistro="ngForm" (ngSubmit)="imagenai()">
+                <input 
+                type="text" 
+                name="imagen"
+                [(ngModel)]="imagen"
+                [disabled]="loading"
+                placeholder="Escribe la imagen...">
+
+                <button mat-mini-fab color="primary" type="submit" [disabled]="loading" [ngClass]="{'boton-default': loading}">
+                    <span value="warn" *ngIf="loading; else enviar">
+                        <img src="../../../assets/img/spinner/spinner.svg" alt="spinner">
+                    </span>
+                      <ng-template #enviar><mat-icon>send</mat-icon></ng-template>
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+</main>
