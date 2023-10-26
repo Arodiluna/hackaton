@@ -1,1 +1,42 @@
-<p>chatgpt works!</p>
+<main>
+
+    <!--
+    <div class="opciones">
+        <button (click)="uno()">Infantil</button>
+        <button (click)="dos()">Inglés</button>
+        <button (click)="tres()">Divertido</button>
+        <button (click)="cuatro()">Mexicano</button>
+    </div>
+    -->
+
+    <div class="chat">
+        <div class="texto">
+            <img src="../../../assets/notfound/bot.png" alt="robot">
+            <p *ngIf="respuestaChat" > {{ respuestaChat }} </p>
+            <p *ngIf="!respuestaChat" > ¡Hola! Bienvenid@ a nuestro chat inteligente TechAll, escribe tu pregunta. :] </p>
+        </div>
+
+        <form #myRegistro="ngForm" (ngSubmit)="openai()">
+            <input 
+            type="text" 
+            name="chat"
+            name="mensaje_uno"
+            [(ngModel)]="mensaje"
+            [disabled]="loading"
+            placeholder="Escribe tu pregunta aquí...">
+
+            <button mat-mini-fab color="primary" type="submit" [disabled]="loading" [ngClass]="{'boton-default': loading}">
+                <span value="warn" *ngIf="loading; else enviarText">
+                    <img src="../../../assets/img/spinner/spinner.svg" alt="spinner">
+                </span>
+                  <ng-template #enviarText><mat-icon>send</mat-icon></ng-template>
+            </button>
+        </form>
+
+        <div *ngIf="loading" class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+    </div>
+</main>

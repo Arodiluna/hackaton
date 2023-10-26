@@ -1,0 +1,139 @@
+main {
+    background: linear-gradient(to bottom, #FF8A00, #ff003c00);
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chat {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    height: 500px;
+    width: 70%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat .texto {
+    margin: 40px;
+    height: 650px;
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    overflow-y: scroll;
+}
+
+.chat .texto img {
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chat .texto p {
+    width: 100%;
+    margin-right: 20px;
+    color: gray;
+    font-weight: bold;
+    text-align: justify;
+}
+
+form {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 15px;
+}
+
+form input {
+    width: 350px;
+    padding: 10px;
+}
+
+form input::placeholder {
+    font-style: italic;
+}
+
+//Valor loader.
+@keyframes loading {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+  }
+  
+  .loader {
+    position: fixed;
+    display: flex;
+    margin-top: 410px;
+    width: 100px;
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  .loader span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    background: rgb(130, 130, 130);
+    border-radius: 50%;
+    animation: loading 1s infinite;
+  }
+  
+  .loader span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .loader span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  //Valor span.
+  .chat.boton-default {
+    cursor: none;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.800);
+}
+
+
+.chat span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+span img {
+    width: 30px;
+}
+
+.opciones {
+    display: flex;
+    gap: 10px;
+}
+
+.opciones button {
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: .5px;
+    font-weight: bold;
+    background-color: rgb(50, 50, 50);
+    transition: .2s;
+}
+
+.opciones button:hover {
+    background-color: rgb(64, 64, 64);
+    transform: translateX(-1px);
+}
