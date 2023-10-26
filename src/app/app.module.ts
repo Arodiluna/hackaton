@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,7 +43,7 @@ import { QuizAlumnosComponent } from './pages/quiz-alumnos/quiz-alumnos.componen
     HomeComponent,
     InclusionComponent,
     DashboardAlumnosComponent,
-    QuizAlumnosComponent
+    QuizAlumnosComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +51,9 @@ import { QuizAlumnosComponent } from './pages/quiz-alumnos/quiz-alumnos.componen
     BrowserAnimationsModule,
     MatIconModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
