@@ -68,6 +68,10 @@ main{
     
 }
 
+.bloq-1 button {
+    cursor: pointer;
+}
+
 .bloq-ia::after {
     content: "";
     position: absolute;
