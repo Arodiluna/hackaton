@@ -113,4 +113,14 @@ async cerrarSesion () {
           await this.route.navigate(['login']);
 }
 
+
+
+//Get información usuario.
+usuario() {
+  const headers = new HttpHeaders({
+    'x-token': localStorage.getItem('token') || ''
+  });
+  return this.http.get(`${ URL }/api/auth/perfil`, {headers})       
+}
+
 }

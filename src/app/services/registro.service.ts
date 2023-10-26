@@ -44,7 +44,7 @@ export class RegistroService {
           console.log(jsonResp);
 
           //Enviar a home.
-          this.route.navigate(['/bienvenida']);
+          this.route.navigate(['/login']);
           
           //Resolve true.
           resolve(true);

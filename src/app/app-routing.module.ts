@@ -16,6 +16,7 @@ import { InclusionComponent } from './pages/inclusion/inclusion.component';
 import { SalaComponent } from './pages/sala/sala.component';
 import { SalaAlumnoComponent } from './pages/sala-alumno/sala-alumno.component';
 import { InteligenciaAlumnosComponent } from './pages/inteligencia-alumnos/inteligencia-alumnos.component';
+import { BienvenidaComponent } from './pages/bienvenida/bienvenida.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'inclusion',
     component: InclusionComponent
+  },
+  {
+    path: 'bienvenida',
+    component: BienvenidaComponent
   },
   {
     path: 'home',
