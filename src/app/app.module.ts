@@ -20,6 +20,9 @@ import { QuizComponent } from './pages/quiz/quiz.component';
 import { MaestroComponent } from './pages/maestro/maestro.component';
 import { EstudianteComponent } from './pages/estudiante/estudiante.component';
 import { HomeComponent } from './pages/home/home.component';
+import { InclusionComponent } from './pages/inclusion/inclusion.component';
+import { DashboardAlumnosComponent } from './pages/dashboard-alumnos/dashboard-alumnos.component';
+import { QuizAlumnosComponent } from './pages/quiz-alumnos/quiz-alumnos.component';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { HomeComponent } from './pages/home/home.component';
     QuizComponent,
     MaestroComponent,
     EstudianteComponent,
-    HomeComponent
+    HomeComponent,
+    InclusionComponent,
+    DashboardAlumnosComponent,
+    QuizAlumnosComponent
   ],
   imports: [
     BrowserModule,
