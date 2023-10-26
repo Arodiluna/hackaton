@@ -74,6 +74,8 @@ const routes: Routes = [
       { path: 'dashboard_estudiante', component: DashboardAlumnosComponent},
       { path: 'quiz_estudiante', component: QuizAlumnosComponent},
       { path: 'sala_estudiante', component: SalaAlumnoComponent},
+      { path: 'imagen', component: ImagenComponent},
+      { path: 'chat', component: ChatgptComponent},
       { path: 'ia_estudiante', component: InteligenciaAlumnosComponent},
       { path: '**', component: NotfoundComponent}
     ],

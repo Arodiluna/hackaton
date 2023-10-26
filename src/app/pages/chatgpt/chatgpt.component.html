@@ -23,6 +23,7 @@
             name="mensaje_uno"
             [(ngModel)]="mensaje"
             [disabled]="loading"
+            maxlength="120"
             placeholder="Escribe tu pregunta aquí...">
 
             <button mat-mini-fab color="primary" type="submit" [disabled]="loading" [ngClass]="{'boton-default': loading}">
