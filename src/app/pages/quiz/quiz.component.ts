@@ -24,7 +24,7 @@ export class QuizComponent {
 
   async openai() {
     this.loading = true;
-    this.complet = 'Crea un quiz con un título y ' + this.mensajes.mensaje_dos + ' preguntas sobre el tema ' + this.mensajes.mensaje_uno + ' de 4 opciones como respuesta y dame la respuesta correcta de cada una.';
+    this.complet = 'Creame un quiz que tenga el titulo de "' +  this.mensajes.mensaje_uno + ' en formato "# Mi Titulo", para las preguntas tendra el formato de "%Pregunta 1: Mi pregunta", para las respuestas tendra el formato "{Respuesta "X": Mi respuesta "X"" en todas las respuestas, luego separame el inciso correcto la cual tendra formato de: "!Inciso:"  Van a ser ' + this.mensajes.mensaje_dos + ' Preguntas con 4 Incisos'
     console.log(this.complet); 
 
     const valido = await this.datos.openai( this.complet );
