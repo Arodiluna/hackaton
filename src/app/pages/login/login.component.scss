@@ -73,6 +73,9 @@ main{
 }
 
 .recuperar-contrasena{
+    display: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     color: var(--color-verde);
     font-weight: 600;
 
@@ -95,6 +98,7 @@ button {
 }
 
 .boton-inicio-sesion button{
+    margin-top: 1rem;
     height: 4rem;
     width: 100%;
     background-color: var(--color-verde);
@@ -166,11 +170,6 @@ margin: 1rem 0;
     border-radius: 1rem;
 }
 
-//Tmaño spinner.
-span {
-
-}
-
 .boton-inicio-sesion.boton-default {
     cursor: none;
     pointer-events: none;
@@ -187,4 +186,40 @@ span {
 
 span img {
     width: 30px;
+}
+
+//Alertas.
+
+.alertas p {
+    font-size: 20px;
+    padding: .5rem 3rem;
+    border-radius: 1rem;
+    animation: aparicion .4s ease-in-out;
+}
+
+.alertas .informacion {
+    color: white;
+    background-color: rgb(255, 145, 0);
+}
+
+.alertas .error {
+    color: white;
+    background-color: rgb(255, 0, 0);
+}
+
+.alertas .correcto {
+    color: white;
+    background-color: rgb(0, 176, 38);
+}
+
+@keyframes aparicion {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

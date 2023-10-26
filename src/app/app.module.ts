@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,10 @@ import { QuizComponent } from './pages/quiz/quiz.component';
 import { MaestroComponent } from './pages/maestro/maestro.component';
 import { EstudianteComponent } from './pages/estudiante/estudiante.component';
 import { HomeComponent } from './pages/home/home.component';
+import { InclusionComponent } from './pages/inclusion/inclusion.component';
+import { DashboardAlumnosComponent } from './pages/dashboard-alumnos/dashboard-alumnos.component';
+import { QuizAlumnosComponent } from './pages/quiz-alumnos/quiz-alumnos.component';
+import { SalaComponent } from './pages/sala/sala.component';
 
 
 @NgModule({
@@ -36,7 +41,11 @@ import { HomeComponent } from './pages/home/home.component';
     QuizComponent,
     MaestroComponent,
     EstudianteComponent,
-    HomeComponent
+    HomeComponent,
+    InclusionComponent,
+    DashboardAlumnosComponent,
+    QuizAlumnosComponent,
+    SalaComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +53,9 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
     MatIconModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

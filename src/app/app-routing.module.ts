@@ -9,6 +9,11 @@ import { tokenGuard } from './guards/token.guard';
 import { HomeComponent } from './pages/home/home.component';
 import { MaestroComponent } from './pages/maestro/maestro.component';
 import { EstudianteComponent } from './pages/estudiante/estudiante.component';
+import { QuizComponent } from './pages/quiz/quiz.component';
+import { DashboardAlumnosComponent } from './pages/dashboard-alumnos/dashboard-alumnos.component';
+import { QuizAlumnosComponent } from './pages/quiz-alumnos/quiz-alumnos.component';
+import { InclusionComponent } from './pages/inclusion/inclusion.component';
+import { SalaComponent } from './pages/sala/sala.component';
 
 const routes: Routes = [
   {
@@ -25,17 +30,41 @@ const routes: Routes = [
     component: RegistroComponent
   },
   {
+    path: 'inclusion',
+    component: InclusionComponent
+  },
+  {
     path: 'home',
     component: HomeComponent,
     children: [
       { path: '', redirectTo: 'inicio', pathMatch: 'full'},
       { path: 'inicio', component: InicioComponent},
-      { path: 'maestro', component: MaestroComponent},
-      { path: 'estudiante', component: EstudianteComponent},
-      { path: 'dashboard', component: DashboardComponent},
       { path: '**', component: NotfoundComponent}
     ],
-    canActivate: [ tokenGuard ]
+    //canActivate: [ tokenGuard ]
+  },
+  {
+    path: 'maestro',
+    component: MaestroComponent,
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+      { path: 'dashboard', component: DashboardComponent},
+      { path: 'quiz', component: QuizComponent},
+      { path: 'sala', component: SalaComponent},
+      { path: '**', component: NotfoundComponent}
+    ],
+    //canActivate: [ tokenGuard ]
+  },
+  {
+    path: 'estudiante',
+    component: EstudianteComponent,
+    children: [
+      { path: '', redirectTo: 'dashboard_estudiante', pathMatch: 'full'},
+      { path: 'dashboard_estudiante', component: DashboardAlumnosComponent},
+      { path: 'quiz_estudiante', component: QuizAlumnosComponent},
+      { path: '**', component: NotfoundComponent}
+    ],
+    //canActivate: [ tokenGuard ]
   },
   {
     path: '**',

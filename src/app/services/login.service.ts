@@ -15,7 +15,7 @@ export class LoginService {
   constructor( private http: HttpClient, 
     private route: Router ) { }
 
-    loginAdm( email: string, pass: string ): Promise<boolean> {
+    login( email: string, pass: string ): Promise<boolean> {
 
       //Constante con el valor email y pass.
       const data = { email, pass };
@@ -44,6 +44,7 @@ export class LoginService {
           console.log(jsonResp);
           //Guardar token.
           localStorage.setItem('token', jsonResp.token);
+          localStorage.setItem('nombre', jsonResp.nombre);
         
           //Guardar roles y dar valores string.
           if ( jsonResp.discapacidad == '1' ) {
@@ -102,4 +103,14 @@ validarToken (): Promise<boolean> {
     })
   });
 }
+
+//Cerrar sesión.
+async cerrarSesion () {
+  //Mostrar loading. 
+          localStorage.removeItem('token');
+          localStorage.removeItem('rol');
+          localStorage.removeItem('nombre');
+          await this.route.navigate(['login']);
+}
+
 }

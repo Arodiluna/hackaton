@@ -1,1 +1,46 @@
-<p>quiz works!</p>
+<main>
+
+  <section class="sec-1">
+
+    <form #myRegistro="ngForm" (ngSubmit)="openai()">
+    <div class="bloq">
+        <div class="tema">
+            <h2>TEMA</h2>
+            <input 
+            type="text"
+            name="mensaje_uno"
+            [(ngModel)]="mensajes.mensaje_uno"
+            [disabled]="loading"
+            maxlength="60"
+            placeholder="INTRODUCE TU TEMA" />
+        </div>
+    </div>
+
+    <div class="bloq">
+        <div class="preguntas">
+            <h2>NÚMERO DE PREGUNTAS</h2>
+            <input 
+            type="text" 
+            name="mensaje_dos" 
+            [(ngModel)]="mensajes.mensaje_dos"
+            [disabled]="loading"
+            minlength="1"
+            maxlength="10"
+            placeholder="INDICA TU NÚMERO DE PREGUNTAS" />
+          </div>
+    </div>
+
+
+    <div class="boton-inicio-sesion">
+      <button type="submit" [disabled]="loading" [ngClass]="{'boton-default': loading}">
+        <span value="warn" *ngIf="loading; else enviarText">
+            <img src="../../../assets/img/spinner/spinner.svg" alt="spinner">
+        </span>
+          <ng-template #enviarText> <mat-icon>check_circle</mat-icon> Crear quiz</ng-template>
+    </button>
+
+    </div>
+  </form>
+  </section>
+
+</main>

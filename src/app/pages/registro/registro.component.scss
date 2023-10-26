@@ -99,6 +99,7 @@ main{
 
 
 .inputs input{
+    padding-left: 1rem;
     height: 4rem;
     border-radius: .5rem;
     background-color:rgba(255, 255, 255, 0);
@@ -114,6 +115,10 @@ main{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+button {
+    cursor: pointer;
 }
 
 .boton-inicio-sesion button{
@@ -167,3 +172,58 @@ margin: 1rem 0;
     border-radius: .5rem;
 }
 
+//Imagen cargando.
+span img {
+    width: 30px;
+}
+
+//Deshabilitar boton.
+.boton-cuenta button.boton-default {
+    cursor: none;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.800);
+}
+
+//Discapacidad select.
+.discapacidad {
+    color: gray;
+    padding-left: 15px;
+    height: 3rem;
+    border: 1px solid gray;
+    border-radius: .5rem;
+}
+
+//Alertas.
+.alertas p {
+    font-size: 20px;
+    padding: .5rem 3rem;
+    border-radius: 1rem;
+    animation: aparicion .4s ease-in-out;
+}
+
+.alertas .informacion {
+    color: white;
+    background-color: rgb(255, 145, 0);
+}
+
+.alertas .error {
+    color: white;
+    background-color: rgb(255, 0, 0);
+}
+
+.alertas .correcto {
+    color: white;
+    background-color: rgb(0, 176, 38);
+}
+
+@keyframes aparicion {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

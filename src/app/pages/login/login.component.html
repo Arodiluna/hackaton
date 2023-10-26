@@ -2,6 +2,13 @@
   <section class="bloq-izq">
     <div class="bloq-inicio-sesion">
       <div class="inicio-sesion">
+
+        <div class="alertas">
+           <p class="informacion" *ngIf="alerta.informacion"> {{ alerta.informacion }} </p>
+           <p class="error" *ngIf="alerta.error"> {{ alerta.error }} </p>
+           <p class="correcto" *ngIf="alerta.correcto"> {{ alerta.correcto }} </p>
+        </div>
+
         <h1>Iniciar Sesión</h1>
         <p>Ingresa tu nombre de usuario y tu contraseña para ingresar</p>
       </div>

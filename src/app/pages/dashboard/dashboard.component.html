@@ -1,1 +1,102 @@
-<p>dashboard works!</p>
+<main>
+    <section class="bloq-principal">
+
+        <section class="sec-1">
+            <h2 class="titulo-quiz">MIS QUIZES</h2>
+            <div class="mi-quiz">
+                <div class="quiz">
+                    <h2>MATEMÁTICAS</h2>
+                    <h4>5 preguntas</h4>
+                </div>
+                <div class="info-extra">
+                    <div class="caja-activar">
+                        <a href="">ACTIVAR</a>
+                    </div>
+                    <p>FECHA: 25 / OCT / 2023 </p>
+                </div>
+            </div>
+            <div class="mi-quiz">
+                <div class="quiz">
+                    <h2>ESPAÑOL</h2>
+                    <h4>10 preguntas</h4>
+                </div>
+                <div class="info-extra"> 
+                    <div class="caja-activar">
+                        <a href="">ACTIVAR</a>
+                    </div>
+                    <p>FECHA: 11 / OCT / 2023 </p>
+                </div>
+            </div>
+            <div class="mi-quiz">
+                <div class="quiz">
+                    <h2>HISTORIA</h2>
+                    <h4>7 preguntas</h4>
+                </div>
+                <div class="info-extra">
+                    <div class="caja-activar">
+                        <a href="">ACTIVAR</a>
+                    </div>
+                    <p>FECHA: 16 / OCT / 2023 </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="sec-2">
+            <div routerLink="/maestro/quiz" class="bloq-crear">
+                <img src="/assets/img/dashboard/robot.png" alt="">      
+                <div class="bloq-crear-texto">
+                    <p>CREAR QUIZ</p>
+                    <p>CON IA</p>
+                </div>
+            </div>
+            
+            <div class="bloq-alumnos">
+                <div class="encabezado-tabla">
+                    <div class="caja-excel">
+                        <img src="../../../assets/img/dashboard/excel.png" alt="Exportar Excel">
+                    </div>
+                    <div class="caja-titulo">
+                        <h2>MIS ALUMNOS</h2>
+                    </div>
+                    <div>
+                        <!-- Queda pendiente el de busqueda -->
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col-1">Nivel</th>
+                            <th class="col-2">Nombre</th>
+                            <th class="col-3">Correo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mariana Torres</td>
+                            <td>mariana20@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Arturo Monroy</td>
+                            <td>arturomonroy19@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Joselyn Cruz</td>
+                            <td>joselyncruz9@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Angelica Espinoza</td>
+                            <td>angelica2323@gmail.com</td>
+                        </tr>
+                        <!-- Puedes agregar más filas según sea necesario -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </section>
+</main>
