@@ -44,6 +44,7 @@ export class LoginService {
           console.log(jsonResp);
           //Guardar token.
           localStorage.setItem('token', jsonResp.token);
+          localStorage.setItem('nombre', jsonResp.nombre);
         
           //Guardar roles y dar valores string.
           if ( jsonResp.discapacidad == '1' ) {

@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { catchError, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 
 //URL.
@@ -56,4 +56,18 @@ export class RegistroService {
     }); 
   }
 
+
+  //Tamaño fuente.
+  private fontSizeSubject = new BehaviorSubject<number>(14);
+  fontSize$: Observable<number> = this.fontSizeSubject.asObservable();
+
+  increaseFontSize(increment: number) {
+    const currentSize = this.fontSizeSubject.getValue();
+    let newSize = currentSize + increment;
+
+    if (newSize > 20) {
+     newSize = 14;
+   }
+    this.fontSizeSubject.next(newSize);
+  }
 }
