@@ -156,6 +156,7 @@ margin: 1rem 0;
     border-radius: 1rem;
     background-position: center;
     position: relative;
+    z-index: 1;
 }
 
 
@@ -168,6 +169,7 @@ margin: 1rem 0;
     height: 100%;
     background: linear-gradient(to bottom, rgba(211, 191, 154, 0.6) 60%, rgba(178, 142, 94, 1)); 
     border-radius: 1rem;
+    z-index: -1;
 }
 
 .boton-inicio-sesion.boton-default {
