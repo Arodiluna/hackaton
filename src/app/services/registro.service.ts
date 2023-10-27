@@ -38,10 +38,10 @@ export class RegistroService {
       .subscribe( resp => {
         const jsonResp = JSON.parse(JSON.stringify(resp));
   
-        console.log(resp);
+        //console.log(resp);
 
         if ( jsonResp.ok ) {
-          console.log(jsonResp);
+          //console.log(jsonResp);
 
           //Enviar a home.
           this.route.navigate(['/login']);
