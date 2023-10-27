@@ -1,5 +1,5 @@
 export const environment = {
     production: true,
-    url: 'http://localhost:4300'
+    url: 'https://server-hack-production.up.railway.app'
   };
   
