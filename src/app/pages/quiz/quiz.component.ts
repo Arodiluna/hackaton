@@ -17,6 +17,7 @@ export class QuizComponent {
     mensaje_dos: ''//El número de preguntas.
   }
 
+  msg: string = '';
   complet: string = '';
 
   constructor ( private datos: DatosService,
@@ -24,10 +25,11 @@ export class QuizComponent {
 
   async openai() {
     this.loading = true;
-    this.complet = 'Creame un quiz que tenga el titulo de "' +  this.mensajes.mensaje_uno + ' en formato "# Mi Titulo", para las preguntas tendra el formato de "%Pregunta 1: Mi pregunta", para las respuestas tendra el formato "{Respuesta "X": Mi respuesta "X"" en todas las respuestas, luego separame el inciso correcto la cual tendra formato de: "!Inciso:"  Van a ser ' + this.mensajes.mensaje_dos + ' Preguntas con 4 Incisos'
+    this.complet = 'Creame un quiz que contenga un titulo sobre "' +  this.mensajes.mensaje_uno + ' en formato "# Mi Titulo", para las preguntas tendra el formato de "%Pregunta 1: Mi pregunta", para las respuestas tendra el formato "{Respuesta "X": Mi respuesta "X"" en todas las respuestas, luego separame el inciso correcto la cual tendra formato de: "!Inciso:"  Van a ser ' + this.mensajes.mensaje_dos + ' Preguntas con 4 Incisos'
     console.log(this.complet); 
+    this.msg = 'Creame un quiz que contenga un titulo sobre' + this.mensajes.mensaje_uno + 'que sea de opción multiple con ' + this.mensajes.mensaje_dos + ' preguntas y 4 respuestas y con la respuesta correcta';
 
-    const valido = await this.datos.openai( this.complet );
+    const valido = await this.datos.openai( this.msg );
 
     if ( valido ) {
       this.loading = false;
